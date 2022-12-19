@@ -13,7 +13,7 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 - `unzip` this repository
-- `cd customerio-app`
+- `cd sarif-crud-ember`
 - `npm install`
 - Set the `apiUrl` property to your server url at `config/environment.js`
 
