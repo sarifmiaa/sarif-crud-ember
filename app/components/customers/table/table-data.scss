@@ -1,0 +1,53 @@
+$row-height: 45px;
+
+.row {
+  display: flex;
+  height: $row-height;
+  align-items: center;
+  background-color: #ffffff;
+  text-decoration: none;
+
+  .id {
+    width: 10%;
+    text-align: left;
+
+    p {
+      color: #644b60;
+    }
+  }
+
+  .email {
+    width: 70%;
+    text-align: left;
+
+    p {
+      color: #644b60;
+      text-decoration: underline;
+    }
+  }
+
+  .last-updated {
+    width: 30%;
+    text-align: right;
+
+    p {
+      color: #644b60;
+    }
+  }
+}
+
+.data {
+  display: flex;
+  width: 100%;
+  padding: 0 8px;
+
+  &:nth-child(2n) {
+    background-color: #f2f2f2;
+  }
+
+  .id,
+  .email,
+  .last-updated {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,43 @@
+<section local-class='customer-edit-root' data-test-customer-edit='root'>
+  <div local-class='content'>
+    <div local-class='header'>
+      <h1 local-class='email' data-test-customer-edit='email'>
+        {{@customer.attributes.email}}
+      </h1>
+
+    </div>
+    <p local-class='last-updated' data-test-customer-edit='last-updated'>Last
+      Updated:
+      {{format-date @customer.last_updated}}</p>
+
+    <Customers::Attributes::AttributesSection
+      @customer={{@customer}}
+      @customerMapped={{this.customerMapped}}
+      @viewMode='edit'
+      @setRef={{this.setChildRef}}
+    />
+
+    <div local-class='action-btns'>
+      <Ui::Button
+        @apperance='primary'
+        @type='link'
+        {{on 'click' this.discardChanges}}
+        data-test-customer-edit='discard-button'
+      >
+        Discard Changes
+      </Ui::Button>
+      <Ui::Button
+        @apperance='primary'
+        {{on 'click' this.saveCustomerChanges}}
+        disabled={{this.isCustomerChangesSaving}}
+        data-test-customer-edit='save-button'
+      >
+        {{#if this.isCustomerChangesSaving}}
+          Saving
+        {{else}}
+          Save Changes
+        {{/if}}
+      </Ui::Button>
+    </div>
+  </div>
+</section>

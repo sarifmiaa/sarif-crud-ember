@@ -1,0 +1,27 @@
+{{#if (eq @apperance 'link')}}
+  <LinkTo
+    @route={{@link}}
+    @model={{@model}}
+    local-class='btn link'
+    ...attributes
+  >{{yield}}</LinkTo>
+{{/if}}
+
+{{#if (eq @apperance 'primary')}}
+  {{#if @link}}
+    <LinkTo
+      @route={{@link}}
+      @model={{@model}}
+      local-class='btn primary'
+      ...attributes
+    >{{yield}}</LinkTo>
+  {{/if}}
+
+  {{#unless @link}}
+    <button
+      type='button'
+      local-class='btn {{if this.isButtonOfTypeLink "link" "primary"}}'
+      ...attributes
+    >{{yield}}</button>
+  {{/unless}}
+{{/if}}

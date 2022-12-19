@@ -1,0 +1,21 @@
+.attributes-section-root {
+  margin: 25px 0;
+
+  .attributes-title {
+    font-size: 22px;
+    color: #545568;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+
+  .add-attributes {
+    .name {
+      width: 30%;
+      margin-right: 5%;
+    }
+
+    .add-btn {
+      text-decoration: none;
+    }
+  }
+}

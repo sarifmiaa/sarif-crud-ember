@@ -1,0 +1,33 @@
+<div local-class='attribute-root'>
+  <div local-class='name'>
+    <p>{{@attribute.name}}</p>
+  </div>
+
+  {{#if (eq @viewMode 'edit')}}
+    <div local-class='edit-attributes-value'>
+      {{#if (eq @attribute.name 'id')}}
+        <p local-class='value'>{{@attribute.value}}</p>
+      {{else}}
+        <input
+          local-class='edit-input'
+          aria-label='attributes-value'
+          type='text'
+          value={{this.attributeValue}}
+          {{on 'input' this.onAttributeValueInputChange}}
+        />
+      {{/if}}
+
+    </div>
+    <Customers::Attributes::RemoveAttributeButton
+      @attributeName={{@attribute.name}}
+      @removeAttribute={{@removeAttribute}}
+    />
+  {{/if}}
+
+  {{#if (eq @viewMode 'view')}}
+    <div local-class='edit-attributes-value'>
+      <p local-class='value'>{{@attribute.value}}</p>
+    </div>
+  {{/if}}
+
+</div>

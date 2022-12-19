@@ -10,7 +10,7 @@ module.exports = {
       legacyDecorators: true,
     },
   },
-  plugins: ['ember'],
+  plugins: ['ember', '@typescript-eslint'],
   extends: [
     'eslint:recommended',
     'plugin:ember/recommended',
@@ -21,6 +21,15 @@ module.exports = {
   },
   rules: {},
   overrides: [
+    // TypeScript files
+    {
+      files: ['**/*.ts'],
+      extends: [
+        'plugin:@typescript-eslint/eslint-recommended',
+        'plugin:@typescript-eslint/recommended',
+      ],
+      rules: {},
+    },
     // node files
     {
       files: [

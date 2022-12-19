@@ -1,0 +1,10 @@
+{{#if this.showButton}}
+  <Ui::Button
+    @apperance='primary'
+    @type='link'
+    local-class='remove-button'
+    {{on 'click' this.removeAttribute}}
+  >
+    Remove
+  </Ui::Button>
+{{/if}}

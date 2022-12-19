@@ -1,0 +1,23 @@
+<section local-class='attributes-section-root'>
+  {{#if (eq @viewMode 'edit')}}
+    {{did-insert this.setElementRef}}
+  {{/if}}
+  <p local-class='attributes-title'>
+    Attributes
+  </p>
+
+  {{#each this.customerAtrributes as |attribute|}}
+    <Customers::Attributes::Attribute
+      @attribute={{attribute}}
+      @viewMode={{@viewMode}}
+      @updateAttribute={{this.updateAttribute}}
+      @removeAttribute={{this.removeAttribute}}
+    />
+  {{/each}}
+
+  {{#if (eq @viewMode 'edit')}}
+    <Customers::Attributes::AddAttribute
+      @add={{this.addNewCustomerAtrributes}}
+    />
+  {{/if}}
+</section>

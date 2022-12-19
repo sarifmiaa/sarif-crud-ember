@@ -1,0 +1,18 @@
+.footer-root {
+  width: 100%;
+
+  .content {
+    width: 100%;
+    border-top: 1px solid #e1e1e1;
+
+    .info {
+      width: 80%;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 0;
+      font-size: 14px;
+      color: #74758c;
+    }
+  }
+}

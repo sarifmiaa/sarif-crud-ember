@@ -1,0 +1,26 @@
+<section local-class='customer-details-root' data-test-customer-details='root'>
+  <div local-class='content'>
+    <div local-class='header'>
+      <h1 local-class='email' data-test-customer-details='email-header'>
+        {{@customer.attributes.email}}
+      </h1>
+
+      <Ui::Button
+        @link='customers.edit'
+        @model={{@customer.id}}
+        @apperance='primary'
+        data-test-customer-details='edit-attributes'
+      >Edit Attributes</Ui::Button>
+
+    </div>
+    <p local-class='last-updated' data-test-customer-details='last-updated'>Last
+      Updated:
+      {{format-date @customer.last_updated}}</p>
+
+    <Customers::Attributes::AttributesSection
+      @customer={{@customer}}
+      @customerMapped={{@customerMapped}}
+      @viewMode='view'
+    />
+  </div>
+</section>

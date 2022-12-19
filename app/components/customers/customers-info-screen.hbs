@@ -1,0 +1,16 @@
+<section local-class='customer-section-root' data-test-customer-info='root'>
+  <div local-class='content'>
+    <h1 local-class='section-title' data-test-customer-info='title'>
+      Customers
+    </h1>
+
+    <div local-class='customers-data-table'>
+      <Customers::Table::TableHeader />
+
+      {{#each @customers as |customer|}}
+        <Customers::Table::TableData @customer={{customer}} />
+      {{/each}}
+
+    </div>
+  </div>
+</section>

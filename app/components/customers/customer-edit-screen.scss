@@ -1,0 +1,33 @@
+.customer-edit-root {
+  width: 100%;
+  .content {
+    width: 80%;
+    margin: 0 auto;
+
+    .email {
+      margin-top: 25px;
+      font-size: 28px;
+      color: #545568;
+    }
+
+    .last-updated {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #545568;
+      font-weight: 400;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .action-btns {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin: 35px 0;
+    }
+  }
+}

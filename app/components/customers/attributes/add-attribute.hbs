@@ -1,0 +1,32 @@
+<div local-class='attributes-group add-attributes'>
+  <div local-class='name'>
+    <input
+      local-class='edit-input'
+      aria-label='attributes-name'
+      type='text'
+      placeholder='Name'
+      value={{this.attributeName}}
+      {{on 'input' this.onAttributeInputChange}}
+    />
+  </div>
+  <div local-class='edit-attributes-value'>
+    <input
+      local-class='edit-input'
+      aria-label='attributes-value'
+      type='text'
+      placeholder='Value'
+      value={{this.attributeValue}}
+      {{on 'input' this.onAttributeValueInputChange}}
+    />
+  </div>
+  <div class='add-button'>
+    <Ui::Button
+      @apperance='primary'
+      @type='link'
+      local-class='add-btn'
+      {{on 'click' this.onAdd}}
+    >
+      Add
+    </Ui::Button>
+  </div>
+</div>

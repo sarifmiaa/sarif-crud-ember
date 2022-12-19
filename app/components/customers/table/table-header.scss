@@ -1,0 +1,49 @@
+$row-height: 45px;
+
+.row {
+  display: flex;
+  height: $row-height;
+  align-items: center;
+  border-top: 1px solid #f2f2f2;
+  border-bottom: 1px solid #f2f2f2;
+
+  .id {
+    width: 10%;
+    text-align: left;
+
+    p {
+      color: #644b60;
+    }
+  }
+
+  .email {
+    width: 70%;
+    text-align: left;
+
+    p {
+      color: #644b60;
+    }
+  }
+
+  .last-updated {
+    width: 30%;
+    text-align: right;
+
+    p {
+      color: #644b60;
+    }
+  }
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  padding: 0 8px;
+
+  .id,
+  .email,
+  .last-updated {
+    font-weight: 600;
+    font-size: 14px;
+  }
+}

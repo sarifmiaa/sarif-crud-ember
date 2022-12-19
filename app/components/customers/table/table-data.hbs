@@ -1,0 +1,15 @@
+<LinkTo
+  @route='customers.details'
+  @model={{@customer.id}}
+  local-class='row data'
+>
+  <div local-class='id'>
+    <p>{{@customer.id}}</p>
+  </div>
+  <div local-class='email'>
+    <p>{{@customer.attributes.email}}</p>
+  </div>
+  <div local-class='last-updated'>
+    <p>{{format-date @customer.last_updated}}</p>
+  </div>
+</LinkTo>

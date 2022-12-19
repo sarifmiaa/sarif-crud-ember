@@ -1,56 +1,53 @@
-# customerio-app
+# CRUD - Sarif Mia
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This README outlines the details of running and setting up of this application
 
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
 
-* [Git](https://git-scm.com/)
-* [Node.js](https://nodejs.org/) (with npm)
-* [Ember CLI](https://cli.emberjs.com/release/)
-* [Google Chrome](https://google.com/chrome/)
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/) (with npm)
+- [Ember CLI](https://cli.emberjs.com/release/)
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd customerio-app`
-* `npm install`
+- `unzip` this repository
+- `cd customerio-app`
+- `npm install`
+- Set the `apiUrl` property to your server url at `config/environment.js`
 
 ## Running / Development
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
+- `ember serve`
+- Visit your app at [http://localhost:4200](http://localhost:4200).
+- Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
 
 ### Running Tests
 
-* `ember test`
-* `ember test --server`
-
-### Linting
-
-* `npm run lint`
-* `npm run lint:fix`
+- `ember test`
+- `ember test --server`
 
 ### Building
 
-* `ember build` (development)
-* `ember build --environment production` (production)
+- `ember build` (development)
+- `ember build --environment production` (production)
 
-### Deploying
+### Information on App directory structure
 
-Specify what it takes to deploy your app.
+`--components` All reusable components
+`--common` Interfaces and common util functions and anything common to the application
+`--fixtures` Drafts for test cases
+`--routes` All routes defined in the application
+`--services` Reusable services used appliaction wide
+`--templates` Template files connected to route
 
-## Further Reading / Useful Links
+### Things which can be improved and future work
 
-* [ember.js](https://emberjs.com/)
-* [ember-cli](https://cli.emberjs.com/release/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+- Managing edit of duplicate attributes
+- Detailed test coverage with testing of server requests
+- Mobile responsiveness
+- Load data with caching mechanism while rendering list of customers
+- Use ember router and build a service to redirect between application
+- Add more support for accessibility if required
+- Moving common used css variable to mixins and reusing the properties for easy maintainability

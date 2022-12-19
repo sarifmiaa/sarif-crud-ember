@@ -1,0 +1,41 @@
+.customer-details-root {
+  width: 100%;
+  .content {
+    width: 80%;
+    margin: 0 auto;
+
+    .edit-btn {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      background-color: #7131ff;
+      color: #ffffff;
+      border-radius: 5px;
+      border: 1px solid #7131ff;
+      height: 40px;
+      padding: 0 15px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .email {
+      margin-top: 25px;
+      font-size: 28px;
+      color: #545568;
+    }
+
+    .last-updated {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #545568;
+      font-weight: 400;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
